@@ -1,6 +1,11 @@
-<div *ngFor = "let repo of users">
-    <ul>
-        <li> {{repo.name}} </li>
-    </ul>
-
+<div class = "container">
+    <form >
+        <div class="mt-5">
+          <input type="text" class="form-control" placeholder="enter your github username" id="nameInput" name="nameInput" [(ngModel)]="nameInput" >
+        </div>
+        <div class="spinner-border text-primary" role="status" [hidden] = 'isLoading'>
+          <span class="sr-only"></span>
+        </div>
+        <button  type="submit" class="btn btn-success" >Show Repos</button>
+    </form>
 </div>
