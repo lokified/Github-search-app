@@ -11,6 +11,7 @@ import { User } from 'src/app/user-class/user';
 export class UserComponent implements OnInit {
 
   users : any [] = [];
+  isLoading = true;
 
   constructor(private userService : UserService) {
 
@@ -18,6 +19,9 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+  
+  getPublicRepositories () {
     this.userService.getUsers().then( (response: any[]) => {
       this.users = response;
     })

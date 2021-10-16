@@ -1,5 +1,5 @@
 <div class = "container">
-    <form >
+    <form (ngSubmit) = 'getPublicRepositories()' >
         <div class="mt-5">
           <input type="text" class="form-control" placeholder="enter your github username" id="nameInput" name="nameInput" [(ngModel)]="nameInput" >
         </div>
@@ -8,4 +8,13 @@
         </div>
         <button  type="submit" class="btn btn-success" >Show Repos</button>
     </form>
+    <h5>Welcome {{nameInput}} You have {{repoNumber}} repositories.</h5>
+    <ul *ngFor = 'let repo of users'>
+        <li> {{repo.name}} 
+          <ul>
+            <li> {{repo.description}} </li>
+          </ul>
+        </li>   
+          
+      </ul>
 </div>
