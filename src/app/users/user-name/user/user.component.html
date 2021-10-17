@@ -1,20 +1,11 @@
-<div class = "container">
-    <form (ngSubmit) = 'getPublicRepositories()' >
-        <div class="mt-5">
-          <input type="text" class="form-control" placeholder="enter your github username" id="nameInput" name="nameInput" [(ngModel)]="nameInput" >
-        </div>
-        <div class="spinner-border text-primary" role="status" [hidden] = 'isLoading'>
-          <span class="sr-only"></span>
-        </div>
-        <button  type="submit" class="btn btn-success" >Show Repos</button>
-    </form>
-    <h5>Welcome {{nameInput}} You have {{repoNumber}} repositories.</h5>
-    <ul *ngFor = 'let repo of users'>
-        <li> {{repo.name}} 
-          <ul>
-            <li> {{repo.description}} </li>
-          </ul>
-        </li>   
-          
-      </ul>
+<div class="container mt-5">
+  <form class='searchbox'>
+    Search Username <input type="text" [(ngModel)]='userName'
+    name='userName'(keyup)='findProfile()' class="Search" placeholder='Search or jump to ...'>
+  </form>
+  <h3>Username :{{profile.login}} </h3>
+  <p>Name:{{profile.name}}</p>
+  <p>followers:{{profile.followers}} </p>
 </div>
+
+    
