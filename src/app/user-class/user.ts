@@ -1,3 +1,8 @@
 export class User {
-    constructor (public userName :string) {}
+
+   /*  constructor (
+       userProfile :any,
+       userRepos : any,
+       userName : any
+    ) {} */
 }
