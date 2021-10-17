@@ -7,19 +7,21 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-
   private baseUrl = environment.UserUrl;
-  private token = environment.gitToken;
-  
-  
+  private tokens = environment.gitToken;
 
-  showUsers ( ) : any {
-    return User;
-  }
+  userName : string = '';
+  private clientId = 'a5d7d41a6988eba99dc3';
+  private clientSecret = 'd929fcdc2655da67ead12f36d73247a7d9dd3fcf';
 
-  constructor( private http : HttpClient) {;
-   }
-  getUsers ( input :string) {
-    return this.http.get<any[]>(`${this.baseUrl}${input}/repos`,{ }).toPromise();
+  constructor ( private httpClient : HttpClient) {
+    console.log ('app is running');
   }
+  getUserInfo () {
+    return this.httpClient.get<any[]>(`${this.baseUrl}${this.userName}?client_id= + ${this.clientId} + &client_secret= + ${this.clientSecret}`).toPromise()
+  }
+  updateProfile(userName:string){
+    this.userName =userName;
+  }
+  
 }
