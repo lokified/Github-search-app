@@ -11,7 +11,7 @@ import { User } from 'src/app/user-class/user';
 })
 export class UserComponent implements OnInit {
 
-  profile: any;
+  profile: any = User;
   userName: any = 'lokified';
  
 
