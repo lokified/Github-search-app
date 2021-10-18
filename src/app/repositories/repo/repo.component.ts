@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { Repo } from 'src/app/repo-class/repo';
 
 @Component({
   selector: 'app-repo',
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RepoComponent implements OnInit {
 
-  repos: any;
+  repos: any = Repo;
   userName: any = 'lokified';
 
   constructor( private userService : UserService) { }
