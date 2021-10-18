@@ -9,21 +9,21 @@ import { UserService } from 'src/app/services/user.service';
 export class RepoComponent implements OnInit {
 
   repos: any;
-  userName: any = '';
+  userName: any = 'lokified';
 
   constructor( private userService : UserService) { }
 
   showRepos (){
-    this.userService.updateProfile(this.userName);
+    this.userService.updateRepos(this.userName);
   
-    this.userService.getUserRepos().then(repos =>{
-      this.repos= repos; 
+    this.userService.getUserRepos().then(repo =>{
+      this.repos= repo; 
  
      })
   }
 
   ngOnInit(): void {
     this.showRepos();
-   }
+  }
 
 }

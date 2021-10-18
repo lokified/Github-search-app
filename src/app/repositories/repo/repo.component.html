@@ -1,11 +1,15 @@
-<form class='searchbox'>
+<form class="search">
     Search Username <input type="text" [(ngModel)]='userName'
-    name='userName'(keyup)='showRepos()'placeholder='Search'>
+    name='userName'(keyup)='showRepos()'placeholder='Search repos'>
 </form>
-<div class="card" *ngFor = 'let repo of repos'>
-    <h5 class="card-header">{{repo.name}}</h5>
-    <div class="card-body">
-      <p class="card-text">{{repo.description}} </p>
-      <a href="#" class="btn btn-primary">Go to repo</a>
+<div class="repo">
+    <div class="card mt-5 bg-secondary" *ngFor = 'let repo of repos'>
+        <h5 class="card-header ">{{repo.name}}</h5>
+        <div class="card-body">
+          <p class="card-text">{{repo.description}} </p>
+          <a href="#" class="btn btn-primary">Go to repo</a>
+        </div>
     </div>
+
 </div>
+
