@@ -1,14 +1,13 @@
 .search {
     background-color: lightblue;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     
 }
 label{
     font-size: 30px;
 }
-.card{
-    width: 500px;
-    display: flex;
-    justify-content: space-around;
+.repo{
+    width: 700px;
+    
 }

@@ -2,7 +2,7 @@
   <form class='search'>
     <label for="userName">Search Username </label>
     <input type="text" [(ngModel)]='userName' id="userName"
-    name='userName'(keyup)='findProfile()' class="form-control" placeholder='Search or jump to ...'>
+    name='userName'(keyup)='findProfile()' class="form-control" placeholder='Search ' appChangeBg>
   </form>
   
 
@@ -24,9 +24,9 @@
               <li class="list-group-item">Repositories:{{profile.public_repos}}</li>
               
             </ul>
-            <span class="badge badge-primary">followers {{profile.followers}}</span>
-            <span class="badge badge-secondary">following {{profile.following}}</span>
-            <a href="{{profile.html_url}}" class="btn btn-primary">  Go to Github</a>
+            <span class="btn btn-secondary">{{profile.followers}} Followers</span>
+            <span class="btn btn-info">{{profile.following}} Following</span><br>
+            <a href="{{profile.html_url}}" class="btn btn-primary mt-4">  Go to Github</a>
           </div>
         </div>
       </div>

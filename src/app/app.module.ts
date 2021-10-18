@@ -9,6 +9,8 @@ import { UserComponent } from './users/user-name/user/user.component';
 import { RepoComponent } from './repositories/repo/repo.component';
 import { NavComponent } from './nav-bar/nav/nav.component';
 import { HomeComponent } from './home/home/home.component';
+import { ChangeBgDirective } from './change-bg.directive';
+import { ToUpperCasePipe } from './to-upper-case.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HomeComponent } from './home/home/home.component';
     RepoComponent,
     NavComponent,
     HomeComponent,
+    ChangeBgDirective,
+    ToUpperCasePipe,
     
   ],
   imports: [
