@@ -28,6 +28,11 @@ export class UserComponent implements OnInit {
      this.profile = profile; 
     });
 
+    this.userService.getUserRepos().then(repos =>{
+     this.repos= repos; 
+
+    })
+
   }
   ngOnInit(): void {
     this.findProfile();
