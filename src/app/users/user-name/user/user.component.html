@@ -7,14 +7,7 @@
 
   <div class="card text-center">
     <div class="card-header">
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Github Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Repositories</a>
-        </li>
-      </ul>
+      <h3>{{profile.login}}</h3>
     </div>
     <div class="card-body">
       <div class="row no-gutters">
@@ -37,12 +30,4 @@
       
     </div>
   </div>
-</div>
-
-
-<div *ngFor = 'let repo of repos'>
-  <h3> {{repo.name}} </h3>
-  <p> {{repo.description}} </p>
-</div>
-
-    
+</div>  

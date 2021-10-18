@@ -12,8 +12,7 @@ import { User } from 'src/app/user-class/user';
 export class UserComponent implements OnInit {
 
   profile: any;
-  repos: any;
-  userName: any = '';
+  userName: any = 'lokified';
  
 
   constructor(private userService : UserService) {
@@ -28,10 +27,7 @@ export class UserComponent implements OnInit {
      this.profile = profile; 
     });
 
-    this.userService.getUserRepos().then(repos =>{
-     this.repos= repos; 
-
-    })
+ 
 
   }
   ngOnInit(): void {

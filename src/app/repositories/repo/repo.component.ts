@@ -9,10 +9,13 @@ import { UserService } from 'src/app/services/user.service';
 export class RepoComponent implements OnInit {
 
   repos: any;
-  
+  userName: any = '';
+
   constructor( private userService : UserService) { }
 
   showRepos (){
+    this.userService.updateProfile(this.userName);
+  
     this.userService.getUserRepos().then(repos =>{
       this.repos= repos; 
  
@@ -20,6 +23,7 @@ export class RepoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
+    this.showRepos();
+   }
 
 }
