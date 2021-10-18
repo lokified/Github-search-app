@@ -1,7 +1,8 @@
 <div class="container mt-5">
-  <form class='searchbox'>
-    Search Username <input type="text" [(ngModel)]='userName'
-    name='userName'(keyup)='findProfile()' class="Search" placeholder='Search or jump to ...'>
+  <form class='search'>
+    <label for="userName">Search Username </label>
+    <input type="text" [(ngModel)]='userName' id="userName"
+    name='userName'(keyup)='findProfile()' class="form-control" placeholder='Search or jump to ...'>
   </form>
   
 
@@ -23,6 +24,8 @@
               <li class="list-group-item">Repositories:{{profile.public_repos}}</li>
               
             </ul>
+            <span class="badge badge-primary">followers {{profile.followers}}</span>
+            <span class="badge badge-secondary">following {{profile.following}}</span>
             <a href="{{profile.html_url}}" class="btn btn-primary">  Go to Github</a>
           </div>
         </div>
