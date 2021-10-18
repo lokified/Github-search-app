@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './users/user-name/user/user.component';
 import { RepoComponent } from './repositories/repo/repo.component';
 import { NavComponent } from './nav-bar/nav/nav.component';
+import { HomeComponent } from './home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NavComponent } from './nav-bar/nav/nav.component';
     UserComponent,
     RepoComponent,
     NavComponent,
+    HomeComponent,
     
   ],
   imports: [
