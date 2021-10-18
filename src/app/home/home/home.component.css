@@ -1,5 +1,13 @@
+p,h5,h3{
+    color:white;
+}
 div{
     background: url('../../../assets/github.png');
     background-size: cover;
-    padding-bottom: 41%;
+    background-repeat: no-repeat;
+    
+}
+.follow{
+    margin-top: 10px;
+    margin-right: 10px;
 }

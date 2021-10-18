@@ -1,3 +1,44 @@
 <div class="container-fluid " >
     <h1 class="text-primary text-center">Github Search</h1>
+    <div class="mt-5">
+       
+        <div class="card text-center">
+          <div class="card-header">
+            <h3>{{profile.login}}</h3>
+          </div>
+          <div class="card-body">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img [src]='profile.avatar_url' class="card-img">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Username:{{profile.login}}</li>
+                    <li class="list-group-item">Name:{{profile.name}}</li>
+                    <li class="list-group-item">Bio:{{profile.bio}}</li>
+                    <li class="list-group-item">Repositories:{{profile.public_repos}}</li>
+                    
+                  </ul>
+                  <span class="btn btn-secondary follow">{{profile.followers}} Followers</span>
+                  <span class="btn btn-info follow">{{profile.following}} Following</span><br>
+                  <a href="{{profile.html_url}}" class="btn btn-primary mt-4">  Go to Github</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </div> 
+
+    <h2 class="text-center text-white">My Repositories</h2>
+    <div class="card mt-5 bg-secondary" *ngFor = 'let repo of repos'>
+        <h5 class="card-header ">{{repo.name}}</h5>
+        <div class="card-body">
+          <p class="card-text">{{repo.description | toUpperCase}} </p>
+          <p>Created: {{repo.created_at | date }}</p>
+          <a href="{{repo.html_url}}" class="btn btn-primary">Go to repo</a>
+        </div>
+    </div>
+
 </div>
