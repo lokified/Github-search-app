@@ -11,24 +11,22 @@ export class UserService {
   private tokens = environment.gitToken;
 
   userName : string = '';
-  repoName : string='';
-  private clientId = 'a5d7d41a6988eba99dc3';
-  private clientSecret = 'd929fcdc2655da67ead12f36d73247a7d9dd3fcf';
+  
 
   constructor ( private httpClient : HttpClient) {
     console.log ('app is running');
   }
   getUserInfo () {
-    return this.httpClient.get<any[]>(`${this.baseUrl}${this.userName}?client_id= + ${this.clientId} + &client_secret= + ${this.clientSecret}`).toPromise();
+    return this.httpClient.get<any[]>(`${this.baseUrl}${this.userName}??access_token=+${this.tokens}`).toPromise();
   }
   updateProfile(userName:string){
     this.userName =userName;
   }
 
   getUserRepos () {
-    return this.httpClient.get<any[]>(`${this.baseUrl}${this.userName}/repos`).toPromise();
+    return this.httpClient.get<any[]>(`${this.baseUrl}${this.userName}/repos??access_token=+${this.tokens}`).toPromise();
   }
   updateRepos(repos : string) {
-    return this.repoName = repos;
+    return this.userName = repos;
   }
 }
