@@ -3,9 +3,46 @@
     Search Username <input type="text" [(ngModel)]='userName'
     name='userName'(keyup)='findProfile()' class="Search" placeholder='Search or jump to ...'>
   </form>
-  <h3>Username :{{profile.login}} </h3>
-  <p>Name:{{profile.name}}</p>
-  <p>followers:{{profile.followers}} </p>
+  
+
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Github Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Repositories</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img [src]='profile.avatar_url' class="card-img">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Username:{{profile.login}}</li>
+              <li class="list-group-item">Name:{{profile.name}}</li>
+              <li class="list-group-item">Bio:{{profile.bio}}</li>
+              <li class="list-group-item">Repositories:{{profile.public_repos}}</li>
+              
+            </ul>
+            <a href="{{profile.html_url}}" class="btn btn-primary">  Go to Github</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor = 'let repo of repos'>
+  <h3> {{repo.name}} </h3>
+  <p> {{repo.description}} </p>
 </div>
 
     
