@@ -1,4 +1,5 @@
 # GithubSearch
+app to search your Github  repositories
 
 #### By Sheldon OKware
 ## Description
