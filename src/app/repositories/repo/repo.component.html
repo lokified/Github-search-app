@@ -3,15 +3,14 @@
     <input type="text" [(ngModel)]='userName'
     name='userName'(keyup)='showRepos()'placeholder='Search repos' class="form-control" appChangeBg>
 </form>
-<div class=" container repo">
-    <div class="card mt-5 bg-secondary" *ngFor = 'let repo of repos'>
+<div class="container repo">       
+    <div class="card mt-5 " *ngFor = 'let repo of repos'>  
         <h5 class="card-header ">{{repo.name}}</h5>
         <div class="card-body">
           <p class="card-text">{{repo.description | toUpperCase}} </p>
           <p>Created: {{repo.created_at | date }}</p>
-          <a href="{{repo.html_url}}" class="btn btn-primary">Go to repo</a>
+          <a href="{{repo.html_url}}" class="btn btn-dark">Go to repo</a>
         </div>
     </div>
-
 </div>
 

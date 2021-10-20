@@ -1,7 +1,7 @@
 p,h5,h3{
     color:white;
 }
-div{
+.head, .card-2{
     background: url('../../../assets/github.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,4 +10,12 @@ div{
 .follow{
     margin-top: 10px;
     margin-right: 10px;
+}
+.card-2{
+    float: right;
+    width: 400px;
+    height: 300px;
+    margin-right: 150px;
+    background-color: lightblue;
+    margin-bottom: 20px;
 }

@@ -1,8 +1,7 @@
 <div class="container-fluid " >
-    <h1 class="text-primary text-center">Github Search</h1>
     <div class="mt-5">
        
-        <div class="card text-center">
+        <div class="card text-center head">
           <div class="card-header">
             <h3>{{profile.login}}</h3>
           </div>
@@ -31,8 +30,8 @@
         </div>
     </div> 
 
-    <h2 class="text-center text-white">My Repositories</h2>
-    <div class="card mt-5 bg-secondary" *ngFor = 'let repo of repos'>
+    <h2 class="text-center mt-5">My Repositories</h2>
+    <div class="card mt-5 bg-secondary card-2" *ngFor = 'let repo of repos'>
         <h5 class="card-header ">{{repo.name}}</h5>
         <div class="card-body">
           <p class="card-text">{{repo.description | toUpperCase}} </p>
